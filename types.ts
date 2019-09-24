@@ -33,6 +33,7 @@ strNumTuple = ['Hello', 4]
 let myVoid: void = null //can be undefined too
 
 let myNull: null = null
+
 let myUndefined: undefined = undefined
 let myUndefined2: null = undefined
 let myNull2: undefined = null
