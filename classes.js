@@ -29,6 +29,7 @@ var User = /** @class */ (function () {
 var john = new User('John Doe', 'johndoe@gmail.com', 40);
 console.log(john.age);
 john.register();
+//  Class inheritence
 var Member = /** @class */ (function (_super) {
     __extends(Member, _super);
     function Member(id, name, email, age) {
@@ -43,3 +44,17 @@ var Member = /** @class */ (function (_super) {
 }(User));
 var mike = new Member(1, 'Mike Smith', 'mikesmith@gmail.com', 33);
 mike.payInvoice();
+// Access modifiers
+// Private, Public, Protected(cane be accessed only through an inheriting class)
+var Hamburger = /** @class */ (function () {
+    function Hamburger(name, secretIngredient, price) {
+        this.name = name;
+        this.secretIngredient = secretIngredient;
+        this.price = price;
+    }
+    return Hamburger;
+}());
+var gourmetSpecial = new Hamburger('Gourmet Special', 'Smoked eggplant', 15);
+console.log(gourmetSpecial.name);
+// console.log(gourmetSpecial.secretIngredient)  *Error because it is private
+// console.log(gourmetSpecial.price) * Error:  Property 'price' is protected and only accessible within class 'Hamburger' and its subclasses.
